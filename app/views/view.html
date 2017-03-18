@@ -1,0 +1,28 @@
+<div class="container">
+	
+	<div class="score">points: = {{detail.totalpoint}}</div>
+	<div class="timer"> Timer : {{minute}}:{{second}}</div>
+
+	<div class="square" ng-repeat="row in rows" ng-click="getInitial(row, $index)"
+        ng-class="{ 'blue'  : row.colorCode == 'blue',
+        			'red'   : row.colorCode == 'red',
+                    'green' : row.colorCode == 'green',
+                    'yellow': row.colorCode == 'yellow',
+                    'block' : row.colorCode == 'block' }">
+    </div>
+
+	<!-- custom directive used for modal box -->
+    <modal-dialog show='modalShown' width='750px' height='60%'>
+  		<p>Matching Pair Game !!!<p>
+  		<div ng-show="!result">
+  			<p>You have 60 seconds to match 8 pairs</p>
+  			<p>here are 3 different tiles..</p>
+  		</div>
+  		<div ng-show="result">
+  			<p>Level complete! !!'</p>
+  			<p>You scored {{detail.totalpoint}}  bonus {{detail.bonusPoint}} </p>	
+  		</div>
+  		<button ng-click="start()">start Game !! - >></button>
+	</modal-dialog>
+
+</div>
