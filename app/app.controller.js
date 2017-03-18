@@ -21,6 +21,7 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
 	    return sourceArray;
     };
 
+    /* Generate json variable with different color for card and then suffle it. */
     function generate(){
       var data = [];
      	for(var i=0;i<8;i++){
@@ -39,7 +40,6 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
   		  data.push({'color': color});
   		  data.push({'color': color});
      	}
-
       $scope.rows = shuffle(data);
     };
 
@@ -110,7 +110,7 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
   			}else{
     				$scope.previous.colorCode = 'white';
     				row.colorCode = 'white';
-    				$scope.detail.totalpoint = $scope.detail.totalpoint+ ($scope.detail.numberOfTimesMatchTileShown * -5);
+    				$scope.detail.totalpoint = $scope.detail.totalpoint + ($scope.detail.numberOfTimesMatchTileShown * -5);
   			}
   			count = 0;
   		},250);
