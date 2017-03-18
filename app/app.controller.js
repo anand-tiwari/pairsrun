@@ -104,7 +104,7 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
 				$scope.detail.totalpoint = $scope.detail.totalpoint+ ($scope.detail.numberOfTimesMatchTileShown * -5);
 			}
 			count = 0;
-		},200);
+		},500);
     }
 
 
@@ -112,14 +112,15 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
     var count = 0;
     $scope.previous;
     $scope.getInitial = function(row, index){
-    	row.colorCode = row.color;
-    	count++;
-    	// for every first click store the data 
-    	if(count==1)
-    		$scope.previous = row;
-		else if(count==2){
-			// for every second click compare colorCode with previous clicked box..
-			compareMatch(row);
-		}
+      row.colorCode = row.color;
+      count++;
+      // for every first click store the data 
+      if(count==1)
+         $scope.previous = row;
+		  else if(count==2){
+        // for every second click compare colorCode with previous clicked box..
+			 compareMatch(row);
+		  }
     };
+    
 });

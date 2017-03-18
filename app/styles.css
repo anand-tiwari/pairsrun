@@ -39,19 +39,23 @@ body{
 .yellow{
 	background-color: yellow;
 }
-.blue, .red, .green, .yellow{
-	transition: background-color 100ms linear;
+.blue, .red, .green, .yellow, .block{
+	/*transition: background-color 100ms linear;*/
+  /* Firefox */
+  -moz-transition: all 400ms ease-in;
+  /* WebKit */
+  -webkit-transition: all 400ms ease-in;
+  /* Opera */
+  -o-transition: all 400ms ease-in;
+  /* Standard */
+  transition: all 400ms ease-in;
 }
+
 .block{
 	pointer-events: none;
 	cursor: default;
 	background-color: black;
-	transition: background-color 100ms linear;
 }
-md-dialog{
-	width: 60%;
-}
-
 
 /*---------------------------------  Custom Modal Directive CSS ------------------------------------------------*/
 
