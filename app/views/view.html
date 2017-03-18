@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-cloak>
 	
 	<div class="score">points: = {{detail.totalpoint}}</div>
 	<div class="timer"> Timer : {{minute}}:{{second}}</div>
@@ -9,20 +9,21 @@
                     'green'  : row.colorCode == 'green',
                     'yellow' : row.colorCode == 'yellow',
                     'block'  : row.colorCode == 'block' }">
-    </div>
+  </div>
 
 	<!-- custom directive used for modal box -->
-    <modal-dialog show='modalShown' width='750px' height='60%'>
+    <modal-dialog show='modalShown' width='600px' height='40%'>
   		<p>Matching Pair Game !!!<p>
   		<div ng-show="!result">
   			<p>You have 60 seconds to match 8 pairs</p>
   			<p>here are 3 different tiles..</p>
+        <button ng-click="start()">Start Game !! - >></button>
   		</div>
   		<div ng-show="result">
   			<p>Level complete! !!'</p>
   			<p>You scored {{detail.totalpoint}}  bonus {{detail.bonusPoint}} </p>	
+        <button ng-click="reset()"> ok </button>
   		</div>
-  		<button ng-click="start()">start Game !! - >></button>
 	</modal-dialog>
 
 </div>
