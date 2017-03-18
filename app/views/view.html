@@ -1,7 +1,7 @@
 <div class="container" ng-cloak>
 	
-	<div class="score">points: = {{detail.totalpoint}}</div>
-	<div class="timer"> Timer : {{minute}}:{{second}}</div>
+	<div class="score">Points:-  {{detail.totalpoint}}</div>
+	<div class="timer"> Timer :-  {{minute}}:{{second}}</div>
   
 	<div class="square" ng-repeat="row in rows" ng-click="getInitial(row, $index)"
         ng-class="{ 'white'  : row.colorCode == 'white',

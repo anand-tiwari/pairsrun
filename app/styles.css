@@ -21,6 +21,7 @@ body{
 .score, .timer{
 	width: 50%;
 	float: left;
+  font-size: 30px;
 }
 .timer{
 	text-align: right;
