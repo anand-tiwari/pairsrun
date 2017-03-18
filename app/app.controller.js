@@ -99,8 +99,8 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
 					$scope.toggleModal();
 				}
 			}else{
-				$scope.previous.colorCode = 'blue';
-				row.colorCode = 'blue';
+				$scope.previous.colorCode = 'white';
+				row.colorCode = 'white';
 				$scope.detail.totalpoint = $scope.detail.totalpoint+ ($scope.detail.numberOfTimesMatchTileShown * -5);
 			}
 			count = 0;
@@ -122,5 +122,5 @@ app.controller('appController', function ($scope, $state, $rootScope, $timeout) 
 			 compareMatch(row);
 		  }
     };
-    
+
 });

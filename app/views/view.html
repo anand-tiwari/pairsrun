@@ -4,11 +4,11 @@
 	<div class="timer"> Timer : {{minute}}:{{second}}</div>
   
 	<div class="square" ng-repeat="row in rows" ng-click="getInitial(row, $index)"
-        ng-class="{ 'blue'  : row.colorCode == 'blue',
-        			'red'   : row.colorCode == 'red',
-                    'green' : row.colorCode == 'green',
-                    'yellow': row.colorCode == 'yellow',
-                    'block' : row.colorCode == 'block' }">
+        ng-class="{ 'white'  : row.colorCode == 'white',
+        			      'red'    : row.colorCode == 'red',
+                    'green'  : row.colorCode == 'green',
+                    'yellow' : row.colorCode == 'yellow',
+                    'block'  : row.colorCode == 'block' }">
     </div>
 
 	<!-- custom directive used for modal box -->
